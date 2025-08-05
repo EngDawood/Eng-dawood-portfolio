@@ -1,6 +1,6 @@
-# Academic Excellence Hub – Next.js Academic Services Platform
+# Academic Excellence Hub – Next.js Academic Services Platform 
 
-Welcome to **Academic Excellence Hub** (مركز التميز الأكاديمي), a comprehensive academic services platform built with Next.js. This project was transformed from a personal developer portfolio into a bilingual (Arabic/English) academic services website, targeting Arabic-speaking students globally.
+Welcome to **Academic Excellence Hub By Eng.dawood** (مركز التميز الأكاديمي), a comprehensive academic services platform built with Next.js. This project was transformed from a personal developer portfolio into a bilingual (Arabic/English) academic services website, targeting Arabic-speaking students globally.
 
 ## 🎯 Core Features
 

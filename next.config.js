@@ -16,6 +16,21 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  // Performance optimizations
+  poweredByHeader: false,
+  // Improve build performance
+  webpack: (config, { dev, isServer }) => {
+    if (dev && !isServer) {
+      // Optimize development builds
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      };
+    }
+    return config;
+  },
 }
 
 module.exports = nextConfig

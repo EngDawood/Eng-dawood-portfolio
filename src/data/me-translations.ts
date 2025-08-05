@@ -90,7 +90,7 @@ export interface FAQTranslation {
 
 export const personalInfoTranslations: Record<Language, PersonalInfoTranslation> = {
   en: {
-    name: "Abdullah Alhasani",
+    name: "Dawood Saleh",
     title: "Software Engineer & Application Developer",
     bioParagraph1: "I am Abdullah Alhasani, a Saudi software engineer. I grew up in a tech-savvy environment and studied Information Technology until I mastered software engineering, combining the outcomes of knowledge, the curiosity of discovery, and the precision of execution.",
     bioParagraph2: "I love to start from a point, an idea, even if it's floating, then weave around it a structure, and build upon it a product worthy of being seen, used, and emulated.",
@@ -99,14 +99,14 @@ export const personalInfoTranslations: Record<Language, PersonalInfoTranslation>
     poetryQuote: "If you dare to pursue an honor sought, do not settle for anything less than the stars",
     poetryAuthor: "Al-Mutanabbi",
     shortBio: "developer applications and websites and build technical solutions powered by artificial intelligence, making a difference and reducing effort and time with the highest quality standards and best results.",
-    email: "3bdallhx2@gmail.com",
-    phone: "0544146288",
-    location: "Makkah - Riyadh, Saudi Arabia",
+    email: " @gmail.com",
+    phone: " ",
+    location: " ",
     available: true,
     socialLinks: {
-      github: "https://github.com/abdallhx2",
-      linkedin: "https://www.linkedin.com/in/abdullahx2/",
-      twitter: "https://twitter.com/abdallhx2"
+      github: "https://github.com/ ",
+      linkedin: "https://www.linkedin.com/in/ /",
+      twitter: "https://twitter.com/ "
     }
   },
   ar: {
@@ -124,9 +124,9 @@ export const personalInfoTranslations: Record<Language, PersonalInfoTranslation>
     location: "مكة المكرمة - الرياض، المملكة العربية السعودية",
     available: true,
        socialLinks: {
-   github: "https://github.com/abdallhx2",
-      linkedin: "https://www.linkedin.com/in/abdullahx2/",
-      twitter: "https://twitter.com/abdallhx2"
+   github: "https://github.com/ ",
+      linkedin: "https://www.linkedin.com/in/ /",
+      twitter: "https://twitter.com/ "
     }
   }
 };
