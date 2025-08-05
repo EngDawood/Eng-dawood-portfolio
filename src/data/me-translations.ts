@@ -90,43 +90,43 @@ export interface FAQTranslation {
 
 export const personalInfoTranslations: Record<Language, PersonalInfoTranslation> = {
   en: {
-    name: "Dawood Saleh",
-    title: "Software Engineer & Application Developer",
-    bioParagraph1: "I am Abdullah Alhasani, a Saudi software engineer. I grew up in a tech-savvy environment and studied Information Technology until I mastered software engineering, combining the outcomes of knowledge, the curiosity of discovery, and the precision of execution.",
-    bioParagraph2: "I love to start from a point, an idea, even if it's floating, then weave around it a structure, and build upon it a product worthy of being seen, used, and emulated.",
-    bioParagraph3: "I master system building and application development, and dive deep into the worlds of artificial intelligence, especially Large Language Models (LLMs). I engineer prompts, design contexts, and harness tools to serve the purpose.",
-    bioParagraph4: "I believe that AI technologies will lead civilization and humanity toward a new refinement, to a safe, bright future, full of surprises, and bound by miracles.",
+    name: "Academic Excellence Hub",
+    title: "Comprehensive Academic Services for Arabic-Speaking Students Worldwide",
+    bioParagraph1: "Leading academic support platform serving Arabic-speaking students worldwide with exceptional support from undergraduate to PhD level across all major disciplines.",
+    bioParagraph2: "Our team of academic experts specializes in Computer Science, Engineering, Medical Sciences, Natural Sciences, Business, and Humanities, ensuring top-quality assistance tailored to each field of study.",
+    bioParagraph3: "With over 8 years of experience and 2,500+ satisfied students, we combine deep subject matter expertise with cultural understanding to deliver exceptional academic results.",
+    bioParagraph4: "We believe in empowering Arabic-speaking students to achieve their academic dreams through personalized support, cutting-edge resources, and unwavering commitment to excellence.",
     poetryQuote: "If you dare to pursue an honor sought, do not settle for anything less than the stars",
     poetryAuthor: "Al-Mutanabbi",
-    shortBio: "developer applications and websites and build technical solutions powered by artificial intelligence, making a difference and reducing effort and time with the highest quality standards and best results.",
-    email: " @gmail.com",
-    phone: " ",
-    location: " ",
+    shortBio: "Providing comprehensive academic services for Arabic-speaking students worldwide, from research assistance to thesis development, ensuring academic success with the highest quality standards.",
+    email: "info@academicexcellencehub.com",
+    phone: "+966-50-123-4567",
+    location: "Serving Arabic-Speaking Students Globally",
     available: true,
     socialLinks: {
-      github: "https://github.com/ ",
-      linkedin: "https://www.linkedin.com/in/ /",
-      twitter: "https://twitter.com/ "
+      github: "https://github.com/academicexcellencehub",
+      linkedin: "https://www.linkedin.com/company/academic-excellence-hub",
+      twitter: "https://twitter.com/academichub_ar"
     }
   },
   ar: {
-    name: "عبدالله الحسني",
-    title: "مهندس برمجيات ومطور تطبيقات",
-    bioParagraph1: "أنا عبدالله الحسني، مهندس برمجيات سعودي. نشأت في بيئة تقنية، ودرست تخصص تقنية المعلومات حتى تمكنت من هندسة البرمجيات، فجمعت بين مخرجات العلم، وفضول الاكتشاف، ودقة التنفيذ.",
-    bioParagraph2: "أحب أن أبدأ من نقطة، فكرة، حتى لو كانت عائمة، ثم أحيك حولها هيكلًا، وأبني عليها منتجًا يستحق أن يُرى، ويُستخدم، ويُحتذى به.",
-    bioParagraph3: "أُتقن بناء الأنظمة وتطوير التطبيقات، وأغوص في عوالم الذكاء الاصطناعي، خصوصًا النماذج اللغوية الكبيرة (LLMs)، أُهندس البرمبت، أُصمّم السياق، وأطوّع الأداة لخدمة الهدف.",
-    bioParagraph4: "أؤمن أن تقنيات الذكاء ستقود الحضارة والإنسان نحو رُقيٍّ جديد، إلى مستقبلٍ آمنٍ، مشرق، مليء بالمفاجآت، ومرهونٍ بالمعجزات.",
+    name: "مركز التميز الأكاديمي",
+    title: "خدمات أكاديمية شاملة للطلاب العرب حول العالم",
+    bioParagraph1: "منصة رائدة للدعم الأكاديمي تخدم الطلاب العرب حول العالم بدعم استثنائي من المرحلة الجامعية حتى الدكتوراه في جميع التخصصات الرئيسية.",
+    bioParagraph2: "يتخصص فريقنا من الخبراء الأكاديميين في علوم الحاسب والهندسة والعلوم الطبية والعلوم الطبيعية والأعمال والعلوم الإنسانية، مما يضمن مساعدة عالية الجودة مخصصة لكل مجال دراسي.",
+    bioParagraph3: "بخبرة تزيد عن 8 سنوات وأكثر من 2500 طالب راضٍ، نجمع بين الخبرة العميقة في المواد الدراسية والفهم الثقافي لتقديم نتائج أكاديمية استثنائية.",
+    bioParagraph4: "نؤمن بتمكين الطلاب العرب لتحقيق أحلامهم الأكاديمية من خلال الدعم الشخصي والموارد المتطورة والالتزام الثابت بالتميز الأكاديمي.",
     poetryQuote: "إذا غامرتَ في شرفٍ مرومِ، فلا تقنعْ بما دونَ النجومِ",
     poetryAuthor: "المتنبي",
-    shortBio: "أطوّر تطبيقات ومواقع وأبني حلولًا تقنية مدعومة بالذكاء الاصطناعي، تحدث الفرق وتقلل الجهد والوقت بأعلى معاير الجودة وافضل النتائج",
-    email: "3bdallhx2@gmail.com",
-    phone: "0544146288",
-    location: "مكة المكرمة - الرياض، المملكة العربية السعودية",
+    shortBio: "نقدم خدمات أكاديمية شاملة للطلاب العرب حول العالم، من المساعدة البحثية إلى تطوير الأطروحات، لضمان النجاح الأكاديمي بأعلى معايير الجودة.",
+    email: "info@academicexcellencehub.com",
+    phone: "٤٦٧-٤٥٦٧-٠٥٠-٩٦٦+",
+    location: "نخدم الطلاب العرب في جميع أنحاء العالم",
     available: true,
-       socialLinks: {
-   github: "https://github.com/ ",
-      linkedin: "https://www.linkedin.com/in/ /",
-      twitter: "https://twitter.com/ "
+    socialLinks: {
+      github: "https://github.com/academicexcellencehub",
+      linkedin: "https://www.linkedin.com/company/academic-excellence-hub",
+      twitter: "https://twitter.com/academichub_ar"
     }
   }
 };
@@ -411,188 +411,84 @@ export const certificatesTranslations: Record<Language, CertificateTranslation[]
 export const servicesTranslations: Record<Language, ServiceOfferingTranslation[]> = {
 en: [
   {
-    title: "Mobile App Development",
-    description: "Building modern, smart mobile applications using Flutter with responsive UI and smooth UX.",
-    icon: "/services/app.png",
+    title: "Computer Science & Programming",
+    description: "Comprehensive academic support for computer science students at all levels, from basic programming to advanced AI and software engineering projects.",
+    icon: "/services/computer-science.png",
     features: [
-      "Cross-platform Flutter development",
-      "Firebase and backend integration",
-      "Responsive and intuitive UI",
-      "REST or GraphQL API integration",
-      "App publishing and continuous updates"
+      "Programming in Java, Python, C++, JavaScript, React, Node.js",
+      "Mobile development with Flutter, React Native, Android, iOS",
+      "AI/ML projects using TensorFlow, PyTorch, Data Science tools",
+      "Database systems: MySQL, PostgreSQL, MongoDB, Oracle",
+      "Web development, software engineering, and system design"
     ],
-    href: "/services/mobile-app-development"
+    href: "/services/computer-science-programming"
   },
   {
-    title: "Web Application Development",
-    description: "Creating modern, scalable, and fast web applications using Next.js, React, and TypeScript.",
-    icon: "/services/web.png",
+    title: "Engineering Services",
+    description: "Expert assistance for engineering students across multiple disciplines, providing comprehensive support for projects, assignments, and research.",
+    icon: "/services/engineering.png",
     features: [
-      "Full-stack development with Next.js & React",
-      "Type-safe coding with TypeScript",
-      "Responsive design across all devices",
-      "API and database integration",
-      "Performance optimization and SEO readiness"
+      "Civil Engineering: Structural Analysis, AutoCAD, Civil 3D projects",
+      "Electrical Engineering: Circuit Design, MATLAB, Power Systems",
+      "Mechanical Engineering: SolidWorks, Thermodynamics, CFD analysis",
+      "Industrial Engineering: Operations Research, Optimization studies",
+      "Chemical Engineering: Process Design, Simulation, Plant design"
     ],
-    href: "/services/web-app-development"
+    href: "/services/engineering-services"
   },
   {
-    title: "Custom AI-Powered Solutions",
-    description: "Developing intelligent solutions tailored to your needs — from LLMs to smart agents and data tools.",
-    icon: "/services/ai.png",
+    title: "Medical & Health Sciences",
+    description: "Specialized academic support for medical and health sciences students, covering clinical studies, research projects, and healthcare management.",
+    icon: "/services/medical.png",
     features: [
-      "LLM integration (like GPT, Claude, etc.)",
-      "Building custom AI agents and chatbots",
-      "Prompt engineering & context design",
-      "Smart analytics and decision support tools",
-      "Embedding AI into existing systems"
+      "Human Medicine: Case Studies, Clinical Research, Medical Documentation",
+      "Dentistry: Treatment Plans, Oral Pathology, Dental Practice Management",
+      "Pharmacy: Drug Development, Pharmacology, Pharmaceutical Research",
+      "Nursing: Care Plans, Healthcare Management, Patient Safety Studies",
+      "Public Health: Epidemiological Studies, Health Policy Analysis"
     ],
-    href: "/services/ai-powered-solutions"
-  },
-  {
-    title: "UI/UX Design & Prototyping",
-    description: "Crafting functional and beautiful user interfaces focused on clarity, usability, and identity.",
-    icon: "/services/ui.png",
-    features: [
-      "Responsive UI/UX design",
-      "User journey and flow optimization",
-      "Interactive wireframes & prototypes",
-      "Figma & modern design tools",
-      "Design-to-development handoff"
-    ],
-    href: "/services/ui-ux-design"
-  },
-  {
-    title: "Technical & AI Consulting",
-    description: "Consulting based on real-world development experience — from product planning to AI integration.",
-    icon: "/services/consultation.png",
-    features: [
-      "AI adoption & use-case strategy",
-      "Product architecture and tech direction",
-      "Audit of existing solutions",
-      "Tool & stack recommendations",
-      "Mentoring technical teams"
-    ],
-    href: "/services/technical-consulting"
-  },
-  {
-    title: "Workshops & Technical Training",
-    description: "Educational sessions tailored for developers and learners in software and AI fields.",
-    icon: "/services/training.png",
-    features: [
-      "Flutter and Next.js training",
-      "LLMs & AI toolchain explanation",
-      "Guidance for students and engineers",
-      "Live or recorded sessions",
-      "Project-based mentoring available"
-    ],
-    href: "/services/mentorship"
-  },
-  {
-    title: "IT Project Management",
-    description: "Managing full project lifecycles — from ideation to launch — with structure and technical clarity.",
-    icon: "/services/mangment.png",
-    features: [
-      "Planning and execution roadmap",
-      "Managing development teams",
-      "Risk assessment & quality assurance",
-      "Client reporting and updates",
-      "Post-launch maintenance strategy"
-    ],
-    href: "/services/it-project-management"
+    href: "/services/medical-health-sciences"
   }
 ],
  ar: [
   {
-    title: "تطوير تطبيقات الهاتف المحمول",
-    description: "أبني تطبيقات جوال ذكية باستخدام Flutter، بواجهات جذابة وتجربة استخدام مرنة ومتجاوبة.",
-    icon: "/services/app.png",
+    title: "علوم الحاسب والبرمجة",
+    description: "دعم أكاديمي شامل لطلاب علوم الحاسب في جميع المستويات، من أساسيات البرمجة إلى مشاريع الذكاء الاصطناعي المتقدمة وهندسة البرمجيات.",
+    icon: "/services/computer-science.png",
     features: [
-      "تطوير متعدد المنصات باستخدام Flutter",
-      "ربط مع Firebase وخدمات الخلفية",
-      "تصميم سلس ومتجاوب لجميع الأجهزة",
-      "تكامل مع REST APIs أو GraphQL",
-      "نشر التطبيق وتحديثه بشكل دوري"
+      "البرمجة بجافا، بايثون، سي++، جافاسكريبت، رياكت، نود.جي إس",
+      "تطوير تطبيقات الهاتف بفلاتر، رياكت نيتيف، أندرويد، آي أو إس",
+      "مشاريع الذكاء الاصطناعي والتعلم الآلي بتنسرفلو، بايتورش، علوم البيانات",
+      "أنظمة قواعد البيانات: ماي إس كيو إل، بوستجريس، مونجو، أوراكل",
+      "تطوير الويب، هندسة البرمجيات، وتصميم الأنظمة"
     ],
-    href: "/services/mobile-app-development"
+    href: "/services/computer-science-programming"
   },
   {
-    title: "تطوير تطبيقات الويب",
-    description: "أطوّر مواقع وتطبيقات ويب باستخدام Next.js و React و TypeScript — سريعة، آمنة، وقابلة للتوسعة.",
-    icon: "/services/web.png",
+    title: "الخدمات الهندسية",
+    description: "مساعدة متخصصة لطلاب الهندسة في مختلف التخصصات، نقدم دعم شامل للمشاريع والواجبات والأبحاث الهندسية.",
+    icon: "/services/engineering.png",
     features: [
-      "Full-stack تطوير باستخدام Next.js و React",
-      "استخدام TypeScript لضمان الجودة",
-      "تصميم متجاوب لجميع الأجهزة",
-      "تكامل مع قواعد البيانات وواجهات البرمجة",
-      "تحسين الأداء وتجهيز للسيو"
+      "الهندسة المدنية: التحليل الإنشائي، أوتوكاد، سيفيل ثري دي",
+      "الهندسة الكهربائية: تصميم الدوائر، ماتلاب، أنظمة القوى",
+      "الهندسة الميكانيكية: سوليدوركس، الديناميكا الحرارية، تحليل السوائل",
+      "الهندسة الصناعية: بحوث العمليات، دراسات التحسين والأمثلة",
+      "الهندسة الكيميائية: تصميم العمليات، المحاكاة، تصميم المصانع"
     ],
-    href: "/services/web-app-development"
+    href: "/services/engineering-services"
   },
   {
-    title: "حلول الذكاء الاصطناعي المخصصة",
-    description: "أطوّر حلول مدعومة بالذكاء الاصطناعي مصممة لخدمة هدفك — من الوكلاء الذكيين إلى أدوات التحليل.",
-    icon: "/services/ai.png",
+    title: "العلوم الطبية والصحية",
+    description: "دعم أكاديمي متخصص لطلاب العلوم الطبية والصحية، يغطي الدراسات السريرية والمشاريع البحثية وإدارة الرعاية الصحية.",
+    icon: "/services/medical.png",
     features: [
-      "تصميم وربط نماذج لغوية كبيرة (LLMs)",
-      "تطوير بوتات ووكلاء ذكيين مخصصين",
-      "هندسة البرومبت والسياق للوصول لأفضل النتائج",
-      "أدوات تحليل بيانات ذكية",
-      "دمج الذكاء الاصطناعي في المنتجات الحالية"
+      "الطب البشري: دراسات الحالات، البحوث السريرية، التوثيق الطبي",
+      "طب الأسنان: خطط العلاج، أمراض الفم، إدارة العيادات السنية",
+      "الصيدلة: تطوير الأدوية، علم الأدوية، البحوث الصيدلانية",
+      "التمريض: خطط الرعاية، إدارة الرعاية الصحية، دراسات سلامة المرضى",
+      "الصحة العامة: الدراسات الوبائية، تحليل السياسات الصحية"
     ],
-    href: "/services/ai-powered-solutions"
-  },
-  {
-    title: "تطوير الواجهات وتجربة المستخدم",
-    description: "أبني واجهات استخدام عملية وجمالية، تركّز على تجربة سلسة للمستخدم، تعكس هوية المنتج.",
-    icon: "/services/ui.png",
-    features: [
-      "تصميم UI/UX احترافي ومتجاوب",
-      "تحليل وتحسين تجربة المستخدم",
-      "تصميم نماذج أولية تفاعلية",
-      "استخدام أحدث أدوات التصميم",
-      "تسليم قابل للتطبيق الفوري"
-    ],
-    href: "/services/ui-ux-design"
-  },
-  {
-    title: "استشارات تقنية  ",
-    description: "أقدم استشارات عملية مبنية على تجربة واقعية، لتساعدك في اتخاذ القرار التقني الصحيح.",
-    icon: "/services/consultation.png",
-    features: [
-      "استشارات في استخدام الذكاء الاصطناعي",
-      "تحليل الفكرة وتوجيهها تقنياً",
-      "مراجعة مشاريع حالية واقتراح تحسينات",
-      "مساعدة في اختيار الأدوات والتقنيات",
-      "توجيه فرق العمل التقني"
-    ],
-    href: "/services/technical-consulting"
-  },
-  {
-    title: "شروحات ودروس خاصة",
-    description: "جلسات تعليمية وشروحات عملية في تطوير البرمجيات والتقنيات الحديثة، مناسبة للطلاب والممارسين.",
-    icon: "/services/training.png",
-    features: [
-      "تدريب على Flutter وNext.js",
-      "شروحات في الذكاء الاصطناعي والنماذج اللغوية",
-      "توجيه للطلاب والباحثين التقنيين",
-      "جلسات مباشرة أو مسجلة",
-      "متابعة مخصصة حسب المشروع أو المهارة"
-    ],
-    href: "/services/mentorship"
-  },
-  {
-    title: "إدارة مشاريع تقنية",
-    description: "أقود المشاريع التقنية من البداية للإطلاق، بخطة واضحة، وتنسيق فعال بين كل الجهات.",
-    icon: "/services/mangment.png",
-    features: [
-      "تخطيط شامل للمشروع وجدول زمني دقيق",
-      "تنسيق الفرق التقنية وضمان الجودة",
-      "إدارة المخاطر وتقديم الحلول",
-      "متابعة وتحديث مستمر لكل مرحلة",
-      "تواصل شفاف مع العميل"
-    ],
-    href: "/services/it-project-management"
+    href: "/services/medical-health-sciences"
   }
 ]
 };

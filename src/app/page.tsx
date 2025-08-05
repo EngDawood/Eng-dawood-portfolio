@@ -2,9 +2,10 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ExternalLink, Cpu, Globe, Smartphone, Server, Code2, Brain, Database, Calendar, Clock, Eye, Heart } from 'lucide-react';
+import { ExternalLink, Cpu, Globe, Smartphone, Server, Code2, Brain, Database, Calendar, Clock, Eye, Heart, Github } from 'lucide-react';
 import { FadeIn } from '@/components/Animations';
 import { useLanguage } from '@/context/LanguageContext';
+import { useTheme } from '@/context/ThemeContext';
 import { useTranslatedData } from '@/hooks/useTranslatedData';
 import HeroSection from '@/components/HeroSection';
 import CustomizationSection from '@/components/CustomizationSection';
@@ -12,6 +13,7 @@ import NoSSR from '@/components/NoSSR';
 
 export default function Home() {
   const { t, isRTL, language } = useLanguage();
+  const { themeMode } = useTheme();
   const { personalInfo, featuredProjects, featuredBlogPosts } = useTranslatedData();
   
   // Tech stack with icons
