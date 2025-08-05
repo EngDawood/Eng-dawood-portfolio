@@ -49,7 +49,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${sourceCodePro.variable} ${cairo.variable} font-sans antialiased`} style={{ backgroundColor: 'var(--background)' }}>
+      <body 
+        className={`${inter.variable} ${sourceCodePro.variable} ${cairo.variable} font-sans antialiased`} 
+        style={{ backgroundColor: 'var(--background)' }}
+        suppressHydrationWarning={true}
+      >
         <ClientThemeProvider>
            <Analytics/>
           <LoadingScreen />

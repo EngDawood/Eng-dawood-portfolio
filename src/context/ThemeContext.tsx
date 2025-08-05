@@ -22,8 +22,6 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   const [themeMode, setThemeMode] = useState<ThemeMode>('light');
 
   useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined') return;
 
     // Load saved preferences, but default to ocean (blue) and light mode
     const savedScheme = localStorage.getItem('colorScheme') as ColorScheme;

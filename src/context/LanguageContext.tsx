@@ -22,17 +22,16 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const [isLanguageChanging, setIsLanguageChanging] = useState(false);
 
   useEffect(() => {
+    
     // Load saved language preference
-    if (typeof window !== 'undefined') {
-      const savedLanguage = localStorage.getItem('language') as Language;
-      const initialLanguage = savedLanguage || 'en';
-      
-      setLanguage(initialLanguage);
-      
-      // Keep direction as LTR always
-      document.documentElement.dir = 'ltr';
-      document.documentElement.lang = initialLanguage;
-    }
+    const savedLanguage = localStorage.getItem('language') as Language;
+    const initialLanguage = savedLanguage || 'en';
+    
+    setLanguage(initialLanguage);
+    
+    // Keep direction as LTR always
+    document.documentElement.dir = 'ltr';
+    document.documentElement.lang = initialLanguage;
   }, []);
 
   const handleLanguageChange = async (lang: Language) => {

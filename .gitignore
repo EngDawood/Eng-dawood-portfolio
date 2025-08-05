@@ -49,3 +49,19 @@ nul
 *.swp
 *.swo
 Thumbs.db
+
+# --- Personal / scratch files ---
+*.log
+*.tmp
+todo.md
+scratch/
+8-5-claude.txt
+ACADEMIC_PLATFORM_ARCHITECTURE.md
+CLAUDE.md
+portfolio-website.code-workspace
+
+# --- Package-manager lock files ---
+# Keep only the one you actually use.  Comment-out the others.
+pnpm-lock.yaml
+# package-lock.json
+# yarn.lock

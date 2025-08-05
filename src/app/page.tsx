@@ -8,6 +8,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useTranslatedData } from '@/hooks/useTranslatedData';
 import { useTheme } from '@/context/ThemeContext';
 import { colorSchemes, type ColorScheme } from '@/data/colors';
+import NoSSR from '@/components/NoSSR';
 
 export default function Home() {
   const { t, isRTL, language, setLanguage } = useLanguage();
@@ -694,11 +695,13 @@ export default function Home() {
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-2 text-xs" style={{ color: 'var(--muted-foreground)' }}>
                         <Calendar size={12} />
-                        <span>{new Date(post.publishedAt).toLocaleDateString(language === 'ar' ? 'ar-SA' : 'en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}</span>
+                        <NoSSR fallback={<span>Loading...</span>}>
+                          <span>{new Date(post.publishedAt).toLocaleDateString(language === 'ar' ? 'ar-SA' : 'en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}</span>
+                        </NoSSR>
                       </div>
                       <div className="flex items-center gap-1 text-xs" style={{ color: 'var(--muted-foreground)' }}>
                         <Clock size={12} />

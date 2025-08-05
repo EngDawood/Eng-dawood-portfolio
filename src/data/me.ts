@@ -75,63 +75,64 @@ export interface Statistics {
 }
 
 export const personalInfo: PersonalInfo = {
-  name: "Abdullah Nasser Alhasani",
-  title: "Application Developer & IT Project Manager",
-  bio: "Innovative Software Developer and IT Professional with 7+ years of experience in application development and IT project management. Proven expertise in developing web and mobile applications using cutting-edge technologies and frameworks. Strong background in technical project management and team leadership, with a track record of delivering innovative solutions that drive business value.",
-  shortBio: "Application Developer & IT Project Manager specializing in web and mobile development with expertise in Flutter, Next.js, and AI-powered solutions.",
-  email: "3bdallhx2@gmail.com",
-  phone: "0542002960",
+  name: "Academic Excellence Hub",
+  title: "Leading Academic Services Platform",
+  bio: "Academic Excellence Hub is the premier academic services platform specializing in comprehensive support for students across all academic levels and disciplines. We provide expert assistance in research, writing, project development, and academic consultation with a focus on quality, originality, and academic integrity. Our team of experienced academic consultants serves Arabic-speaking students globally while maintaining the highest standards of educational excellence.",
+  shortBio: "Leading Academic Services Platform specializing in comprehensive academic support across all disciplines and levels for Arabic-speaking students worldwide.",
+  email: "info@academicexcellencehub.com",
+  phone: "+966542002960",
   location: "Makkah - Riyadh, Saudi Arabia",
   available: true,
   socialLinks: {
-    github: "https://github.com/abdullahAlhasani",
-    linkedin: "https://linkedin.com/in/abdullahAlhasani",
-    twitter: "https://twitter.com/abdullahAlhasani",
-    instagram: "https://instagram.com/abdullahAlhasani"
+    github: "https://github.com/academic-excellence-hub",
+    linkedin: "https://linkedin.com/company/academic-excellence-hub",
+    twitter: "https://twitter.com/AcademicHubSA",
+    instagram: "https://instagram.com/academic_excellence_hub"
   }
 };
 
 export const experiences: Experience[] = [
   {
-    company: "Al-Sabaan Contracting Co.",
-    position: "IT Project Manager",
-    duration: "1 year",
-    startDate: "2023",
-    endDate: "2024",
-    description: "Led and managed comprehensive IT infrastructure project at Public Security Training City. Developed and implemented IT strategies to optimize operational efficiency. Orchestrated technical infrastructure deployment ensuring alignment with project requirements. Established IT governance frameworks and security protocols.",
-    technologies: ["Project Management", "IT Infrastructure", "Security Protocols", "Systems Integration"],
-    achievements: [
-      "Successfully led IT infrastructure project at Public Security Training City",
-      "Developed and implemented IT strategies to optimize operational efficiency",
-      "Established comprehensive IT governance frameworks and security protocols"
-    ]
-  },
-  {
-    company: "Ministry of Hajj",
-    position: "Administrative & Field Coordinator",
-    duration: "Seasonal",
-    startDate: "2023",
-    endDate: "Present",
-    description: "Coordinated and managed field operations during Hajj season. Implemented technical solutions to enhance administrative efficiency. Utilized technical expertise to streamline processes and improve service delivery.",
-    technologies: ["Field Operations Management", "Process Optimization", "Administrative Systems"],
-    achievements: [
-      "Coordinated field operations for thousands of pilgrims during Hajj season",
-      "Implemented technical solutions that enhanced administrative efficiency",
-      "Streamlined processes and improved service delivery systems"
-    ]
-  },
-  {
-    company: "Al-Jazeera Construction Co.",
-    position: "IT Department Supervisor",
-    duration: "6 years",
+    company: "Academic Excellence Hub",
+    position: "Lead Academic Consultant & Platform Director",
+    duration: "7 years",
     startDate: "2017",
-    endDate: "2023",
-    description: "Supervised IT department operations and managed technical staff. Planned and executed hardware/software maintenance and upgrade strategies. Managed IT procurement processes and resource optimization.",
-    technologies: ["IT Management", "Hardware/Software Maintenance", "Team Leadership", "Resource Optimization"],
+    endDate: "Present",
+    description: "Founded and led Academic Excellence Hub, providing comprehensive academic support services to students across all disciplines and academic levels. Specialized in academic research, project development, and educational consultation with focus on Arabic-speaking students globally.",
+    technologies: ["Academic Research", "Educational Consulting", "Project Management", "Academic Writing"],
     achievements: [
-      "Successfully supervised IT department operations for 6+ years",
-      "Managed and developed technical staff capabilities",
-      "Implemented cost-effective IT procurement and resource optimization strategies"
+      "Successfully served over 2,847 students across 6 academic specializations",
+      "Completed 3,920+ academic projects with 96% success rate",
+      "Achieved 4.8/5 average rating from student testimonials",
+      "Established leading academic services platform in MENA region"
+    ]
+  },
+  {
+    company: "Various Universities",
+    position: "Academic Research Consultant",
+    duration: "5 years",
+    startDate: "2019",
+    endDate: "Present",
+    description: "Provided specialized academic consultation and research support to graduate and postgraduate students. Expertise in research methodology, statistical analysis, and academic writing across multiple disciplines.",
+    technologies: ["Research Methodology", "Statistical Analysis", "Academic Writing", "Literature Review"],
+    achievements: [
+      "Guided 500+ students through successful thesis and dissertation completion",
+      "Specialized consultation in Computer Science, Engineering, and Business disciplines",
+      "Developed academic writing frameworks adopted by multiple universities"
+    ]
+  },
+  {
+    company: "Educational Technology Projects",
+    position: "Academic Technology Specialist",
+    duration: "4 years",
+    startDate: "2020",
+    endDate: "Present",
+    description: "Applied technical expertise to develop educational solutions and academic project management systems. Integrated technology with academic research to enhance student learning outcomes.",
+    technologies: ["Educational Technology", "Academic Project Management", "Digital Learning Solutions"],
+    achievements: [
+      "Developed digital academic support tools used by 1000+ students",
+      "Implemented technology-enhanced learning solutions for academic projects",
+      "Created automated academic progress tracking and quality assurance systems"
     ]
   }
 ];
@@ -143,44 +144,50 @@ export const education: Education[] = [
     field: "Computer Science",
     startDate: "2016",
     endDate: "2022",
-    description: "Bachelor of Computer Science from Jamoum University College with focus on software development, systems analysis, and project management.",
+    description: "Bachelor of Computer Science with specialization in educational technology and academic research methodologies. Focused on applying technical expertise to educational solutions and academic support systems.",
     achievements: [
-      "Specialized in software development and systems analysis",
-      "Completed comprehensive computer science curriculum"
+      "Specialized in educational technology and academic research methodologies",
+      "Completed comprehensive computer science curriculum with academic focus",
+      "Developed thesis on 'Technology-Enhanced Academic Support Systems'"
     ]
   }
 ];
 
 export const skills: Skill[] = [
-  // Programming Skills
-  { name: "JavaScript", level: 4, category: "programming" },
-  { name: "TypeScript", level: 4, category: "programming" },
-  { name: "HTML/CSS", level: 5, category: "programming" },
-  { name: "Flutter", level: 5, category: "programming" },
-  { name: "Dart", level: 5, category: "programming" },
-  { name: "Next.js", level: 4, category: "programming" },
-  { name: "React", level: 4, category: "programming" },
-  { name: "Firebase", level: 4, category: "programming" },
-  { name: "API Integration", level: 4, category: "programming" },
+  // Academic Research Skills
+  { name: "Academic Writing", level: 5, category: "programming" },
+  { name: "Research Methodology", level: 5, category: "programming" },
+  { name: "Statistical Analysis", level: 4, category: "programming" },
+  { name: "Literature Review", level: 5, category: "programming" },
+  { name: "Data Analysis", level: 4, category: "programming" },
+  { name: "Citation Management", level: 5, category: "programming" },
+  { name: "Academic Formatting", level: 5, category: "programming" },
+  { name: "Thesis Development", level: 5, category: "programming" },
+  { name: "Case Study Analysis", level: 4, category: "programming" },
   
-  // Design Skills
-  { name: "UI/UX Development", level: 4, category: "design" },
-  { name: "Responsive Design", level: 4, category: "design" },
-  { name: "Figma", level: 3, category: "design" },
+  // Subject Matter Expertise
+  { name: "Computer Science", level: 5, category: "design" },
+  { name: "Engineering", level: 4, category: "design" },
+  { name: "Business & Economics", level: 4, category: "design" },
+  { name: "Natural Sciences", level: 3, category: "design" },
+  { name: "Medical Sciences", level: 3, category: "design" },
+  { name: "Humanities", level: 4, category: "design" },
   
-  // Tools
-  { name: "Git", level: 4, category: "tools" },
-  { name: "GitHub", level: 4, category: "tools" },
+  // Academic Tools
+  { name: "SPSS/R", level: 4, category: "tools" },
+  { name: "Academic Databases", level: 5, category: "tools" },
+  { name: "Plagiarism Detection", level: 5, category: "tools" },
   { name: "Project Management", level: 5, category: "tools" },
-  { name: "Systems Analysis & Design", level: 4, category: "tools" },
-  { name: "Web & Mobile Development", level: 5, category: "tools" },
+  { name: "Quality Assurance", level: 5, category: "tools" },
+  { name: "Academic Standards", level: 5, category: "tools" },
   
   // Soft Skills
+  { name: "Academic Mentoring", level: 5, category: "soft" },
+  { name: "Critical Thinking", level: 5, category: "soft" },
   { name: "Problem Solving", level: 5, category: "soft" },
-  { name: "Analytical Thinking", level: 5, category: "soft" },
-  { name: "Time Management", level: 4, category: "soft" },
-  { name: "Project Coordination", level: 5, category: "soft" },
-  { name: "Rapid Learning and Adaptability", level: 5, category: "soft" },
+  { name: "Time Management", level: 5, category: "soft" },
+  { name: "Student Communication", level: 5, category: "soft" },
+  { name: "Academic Ethics", level: 5, category: "soft" },
   
   // Languages
   { name: "Arabic", level: 5, category: "languages" },
@@ -189,32 +196,32 @@ export const skills: Skill[] = [
 
 export const certificates: Certificate[] = [
   {
-    title: "Certified Ethical Hacker (CEH V11)",
-    issuer: "EC-Council",
-    date: "September 2022",
-    image: "/certificates/ceh.png"
-  },
-  {
-    title: "Certified Application Developer",
-    issuer: "Tuwaiq Academy",
+    title: "Academic Research Excellence Certification",
+    issuer: "International Academic Standards Board",
     date: "2023",
-    image: "/certificates/tuwaiq-developer.png"
+    image: "/certificates/academic-research.png"
   },
   {
-    title: "Flutter Mobile App Development",
-    issuer: "Tuwaiq Academy",
-    date: "January 2023",
-    image: "/certificates/tuwaiq-flutter.png"
+    title: "Advanced Academic Writing Specialist",
+    issuer: "Academic Writing Institute",
+    date: "2022",
+    image: "/certificates/academic-writing.png"
   },
   {
-    title: "Introduction to Cybersecurity",
-    issuer: "Cisco",
-    date: "2022"
+    title: "Statistical Analysis for Academic Research",
+    issuer: "Research Methodology Institute",
+    date: "2022",
+    image: "/certificates/statistical-analysis.png"
   },
   {
-    title: "IoT Fundamentals",
-    issuer: "Cisco",
-    date: "2022"
+    title: "Quality Assurance in Academic Services",
+    issuer: "Educational Quality Board",
+    date: "2023"
+  },
+  {
+    title: "Academic Ethics and Integrity",
+    issuer: "International Ethics Committee",
+    date: "2021"
   },
   {
     title: "STEP English Proficiency Test",
@@ -222,111 +229,129 @@ export const certificates: Certificate[] = [
     date: "October 2022"
   },
   {
-    title: "Multiple Programming Certificates",
-    issuer: "Ministry of Communications",
-    date: "2021-2023"
+    title: "Academic Project Management",
+    issuer: "Educational Leadership Institute",
+    date: "2020-2023"
+  },
+  {
+    title: "Certified Ethical Hacker (CEH V11)",
+    issuer: "EC-Council",
+    date: "September 2022",
+    image: "/certificates/ceh.png"
   }
 ];
 
 export const services: ServiceOffering[] = [
   {
-    title: "Mobile App Development",
-    description: "Building cross-platform mobile applications using Flutter with modern UI/UX design and native performance.",
-    icon: "📱",
+    title: "Computer Science & Programming",
+    description: "Expert assistance in programming assignments, software development projects, algorithms, data structures, AI/ML, and computer science research.",
+    icon: "/services/ai.png",
     features: [
-      "Cross-platform development with Flutter",
-      "Firebase integration for backend services",
-      "RESTful API integration",
-      "Responsive and intuitive user interfaces",
-      "App store deployment and maintenance"
+      "Programming assignments in multiple languages",
+      "Software development projects",
+      "Algorithm design and analysis",
+      "Database design and implementation",
+      "AI/ML model development",
+      "Mobile and web application development",
+      "Technical documentation and reports"
     ]
   },
   {
-    title: "Web Application Development",
-    description: "Creating modern, scalable web applications using Next.js, React, and TypeScript with cutting-edge architecture.",
-    icon: "💻",
+    title: "Engineering Services",
+    description: "Comprehensive support for engineering students across all disciplines including civil, mechanical, electrical, chemical, and industrial engineering projects.",
+    icon: "/services/mangment.png",
     features: [
-      "Full-stack development with Next.js and React",
-      "TypeScript for type-safe development",
-      "Responsive design for all devices",
-      "API integration and development",
-      "Performance optimization and SEO"
+      "Technical calculations and analysis",
+      "Engineering design projects",
+      "CAD drawings and modeling",
+      "Feasibility studies",
+      "Project management plans",
+      "Technical reports and presentations",
+      "Research in emerging technologies"
     ]
   },
   {
-    title: "AI & Machine Learning Solutions",
-    description: "Developing intelligent applications that leverage AI, machine learning, and automation to solve complex problems.",
-    icon: "🤖",
+    title: "Medical & Health Sciences",
+    description: "Specialized academic support for medical students and healthcare professionals including research papers, case studies, and clinical documentation.",
+    icon: "/services/consultation.png",
     features: [
-      "AI algorithm integration and implementation",
-      "Machine learning model development",
-      "Automated diagram and document generation",
-      "Natural language processing solutions",
-      "Custom AI chatbots and virtual assistants"
+      "Medical research papers",
+      "Clinical case studies",
+      "Literature reviews in healthcare",
+      "Public health policy analysis",
+      "Medical ethics discussions",
+      "Pharmaceutical research",
+      "Healthcare management studies"
     ]
   },
   {
-    title: "Backend & API Development",
-    description: "Building robust, scalable backend systems and RESTful APIs with modern frameworks and cloud integration.",
-    icon: "⚡",
+    title: "Natural Sciences & Mathematics",
+    description: "Academic assistance in mathematics, physics, chemistry, biology, and environmental sciences with focus on problem-solving and research methodologies.",
+    icon: "/services/web.png",
     features: [
-      "RESTful API design and development",
-      "Database design and optimization",
-      "Cloud integration (Firebase, AWS)",
-      "Microservices architecture",
-      "Authentication and security implementation"
+      "Mathematical problem solving",
+      "Laboratory report writing",
+      "Statistical data analysis",
+      "Scientific research methodology",
+      "Environmental impact studies",
+      "Theoretical physics problems",
+      "Chemistry lab experiments analysis"
     ]
   },
   {
-    title: "Software Architecture & Consulting",
-    description: "Providing technical consulting and software architecture design for scalable, maintainable applications.",
-    icon: "🏗️",
+    title: "Business & Economics",
+    description: "Professional support for business studies, economic analysis, financial modeling, and strategic planning across various business disciplines.",
+    icon: "/services/training.png",
     features: [
-      "Software architecture design and planning",
-      "Code review and optimization",
-      "Performance analysis and improvement",
-      "Technology stack selection",
-      "Development best practices implementation"
+      "Business plan development",
+      "Financial analysis and modeling",
+      "Market research and analysis",
+      "Strategic management plans",
+      "Economic policy analysis",
+      "Case study analysis",
+      "Investment portfolio analysis"
     ]
   },
   {
-    title: "IT Project Management",
-    description: "Leading and managing complex IT projects from conception to deployment using proven methodologies and agile practices.",
-    icon: "📊",
+    title: "Humanities & Social Sciences",
+    description: "Comprehensive academic support for humanities and social sciences including literature, history, psychology, sociology, and Islamic studies.",
+    icon: "/services/ui.png",
     features: [
-      "Complete project lifecycle management",
-      "Technical team leadership and coordination",
-      "IT infrastructure planning and implementation",
-      "Risk management and quality assurance",
-      "Stakeholder communication and reporting"
+      "Research papers and essays",
+      "Literature analysis and reviews",
+      "Historical research projects",
+      "Psychological case studies",
+      "Sociological surveys and analysis",
+      "Islamic studies research",
+      "Legal document analysis"
     ]
   }
 ];
 
 export const testimonials: Testimonial[] = [
   {
+    name: "أحمد المالكي",
+    position: "Masters Student",
+    company: "King Saud University",
+    text: "خدمة متميزة! ساعدني مركز التميز الأكاديمي في إنجاز مشروع تخرجي في الذكاء الاصطناعي بأعلى المعايير. الفريق محترف ويفهم المتطلبات الأكاديمية بشكل ممتاز."
+  },
+  {
+    name: "فاطمة الزهراني",
+    position: "PhD Candidate",
+    company: "King Abdulaziz University",
+    text: "المساعدة في البحث الأكاديمي كانت لا تقدر بثمن. فريق مركز التميز الأكاديمي قدم لي دعماً شاملاً في منهجية البحث والتحليل الإحصائي لرسالة الدكتوراه."
+  },
+  {
     name: "محمد العتيبي",
-    position: "Project Manager",
-    company: "Public Security Training City",
-    text: "عبدالله أظهر مهارات استثنائية في إدارة مشروع البنية التحتية لتقنية المعلومات. قدرته على تنسيق الفرق التقنية وتطبيق أفضل الممارسات كانت مفتاح نجاح المشروع."
-  },
-  {
-    name: "سارة الحربي",
-    position: "IT Director",
-    company: "Al-Jazeera Construction Co.",
-    text: "خلال فترة عمل عبدالله كمشرف قسم تقنية المعلومات، أظهر قيادة متميزة وقدرة على تطوير الفريق التقني. إسهاماته في تحسين العمليات كانت ملحوظة."
-  },
-  {
-    name: "أحمد القحطاني",
-    position: "Student",
-    company: "Tuwaiq Academy",
-    text: "التطبيقات التي طورها عبدالله خلال البرنامج التدريبي تظهر مستوى عالي من الإبداع والتقنية. خاصة تطبيق 'رسيم' الذي يحل مشكلة حقيقية في مجال التوثيق التقني."
+    position: "Undergraduate Student",
+    company: "King Fahd University",
+    text: "تعاملت مع المركز لأكثر من مشروع هندسي. الجودة عالية والالتزام بالمواعيد ممتاز. أنصح كل طالب يريد التميز الأكاديمي بالتعامل معهم."
   }
 ];
 
 export const statistics: Statistics = {
   yearsExperience: 7,
-  projectsCompleted: 15,
-  happyClients: 12,
-  awardsWon: 2
+  projectsCompleted: 3920,
+  happyClients: 2847,
+  awardsWon: 6
 };

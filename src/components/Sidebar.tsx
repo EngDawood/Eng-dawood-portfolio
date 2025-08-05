@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import NoSSR from '@/components/NoSSR';
 import { 
   Home, 
   FolderOpen, 
@@ -499,7 +500,7 @@ export default function Sidebar() {
                 {/* Copyright */}
                 <div className="text-center">
                   <p className="text-xs" style={{ color: 'var(--muted)' }}>
-                      © {new Date().getFullYear()} {t('footer.allRights') || 'All rights reserved'}
+                      © <NoSSR fallback="2024">{new Date().getFullYear()}</NoSSR> {t('footer.allRights') || 'All rights reserved'}
                   </p>
                 </div>
 
