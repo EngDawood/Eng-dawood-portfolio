@@ -2,79 +2,19 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Mail, Phone, MapPin, Send } from 'lucide-react';
+import { ArrowLeft, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { FadeIn } from '@/components/Animations';
 import { useLanguage } from '@/context/LanguageContext';
-import { useTranslatedData } from '@/hooks/useTranslatedData';
+// Translations are handled within components
+import AcademicContactForm from '@/components/AcademicContactForm';
+import { companyProfile } from '@/data/academic-data';
 
 export default function ContactPage() {
-  const { t } = useLanguage();
-  const { personalInfo, faq } = useTranslatedData();
+  const { t, isRTL } = useLanguage();
   
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
   const [hoverStates, setHoverStates] = useState({
     backLink: false,
-    emailLink: false,
-    phoneLink: false,
-    submitButton: false
   });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: 'success' | 'error' | null;
-    message: string;
-  }>({ type: null, message: '' });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: '' });
-    
-    try {
-      const response = await fetch('https://formspree.io/f/xzzvzrnv', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitStatus({
-          type: 'success',
-          message: 'تم إرسال الرسالة بنجاح! سأقوم بالرد عليك قريباً.'
-        });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        throw new Error('فشل في الإرسال');
-      }
-    } catch {
-      setSubmitStatus({
-        type: 'error',
-        message: 'حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
 
   const handleHover = (element: string, isHovering: boolean) => {
     setHoverStates(prev => ({
@@ -85,262 +25,188 @@ export default function ContactPage() {
 
   return (
     <FadeIn direction="up" duration={0.8}>
-      <div className="min-h-screen page-container px-4 lg:px-8 pt-16 pb-20">
+      <div className="min-h-screen py-8 px-4 lg:px-8">
         {/* Header */}
         <div className="mb-12">
           <Link 
             href="/" 
-            className="inline-flex items-center mb-6 transition-colors"
+            className={`inline-flex items-center mb-6 transition-colors ${isRTL ? 'flex-row-reverse' : ''}`}
             style={{ 
-              color: hoverStates.backLink ? 'var(--accent)' : 'var(--muted-foreground)' 
+              color: hoverStates.backLink ? 'var(--primary)' : 'var(--muted-foreground)' 
             }}
             onMouseEnter={() => handleHover('backLink', true)}
             onMouseLeave={() => handleHover('backLink', false)}
           >
-            <ArrowLeft size={20} className="mr-2" />
+            <ArrowLeft size={20} className={`${isRTL ? 'ml-2 rotate-180' : 'mr-2'}`} />
             {t('common.backToHome')}
           </Link>
           
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold mb-6" style={{ color: 'var(--foreground)' }}>{t('contact.title')}</h1>
-            <p className="text-lg leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>
-              {t('contact.description')}
+          <div className={`max-w-3xl ${isRTL ? 'text-right' : ''}`}>
+            <h1 className={`text-4xl lg:text-5xl font-bold mb-6 text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+              {isRTL ? 'تواصل معنا' : 'Contact Us'}
+            </h1>
+            <p className={`text-lg leading-relaxed text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+              {isRTL 
+                ? 'نحن هنا لمساعدتك في تحقيق التميز الأكاديمي. تواصل معنا للحصول على استشارة مجانية حول مشروعك الأكاديمي.'
+                : 'We are here to help you achieve academic excellence. Contact us for a free consultation about your academic project.'
+              }
             </p>
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Contact Info Cards - Mobile First */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-            <div className="card p-6" style={{ backgroundColor: 'var(--card)', border: '1px solid var(--border)' }}>
-              <div className="flex flex-col items-center text-center">
-                <div className="p-3 rounded-xl mb-4" style={{ backgroundColor: 'var(--accent-light)' }}>
-                  <Mail size={20} style={{ color: 'var(--accent)' }} />
+        <div className="max-w-6xl mx-auto">
+          {/* Contact Info Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-card border border-border rounded-xl p-6">
+              <div className={`flex flex-col items-center text-center ${isRTL ? 'text-right' : ''}`}>
+                <div className="p-3 rounded-xl mb-4 bg-primary/10">
+                  <Mail size={20} className="text-primary" />
                 </div>
-                <h3 className="font-semibold mb-2" style={{ color: 'var(--foreground)' }}>{t('contact.form.email')}</h3>
+                <h3 className={`font-semibold mb-2 text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {isRTL ? 'البريد الإلكتروني' : 'Email'}
+                </h3>
                 <a 
-                  href={`mailto:${personalInfo.email}`} 
-                  className="text-sm transition-colors hover:underline break-all"
-                  style={{ 
-                    color: hoverStates.emailLink ? 'var(--accent)' : 'var(--muted-foreground)' 
-                  }}
-                  onMouseEnter={() => handleHover('emailLink', true)}
-                  onMouseLeave={() => handleHover('emailLink', false)}
+                  href={`mailto:${companyProfile.email}`} 
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary hover:underline break-all"
                 >
-                  {personalInfo.email}
+                  {companyProfile.email}
                 </a>
               </div>
             </div>
             
-            <div className="card p-6" style={{ backgroundColor: 'var(--card)', border: '1px solid var(--border)' }}>
-              <div className="flex flex-col items-center text-center">
-                <div className="p-3 rounded-xl mb-4" style={{ backgroundColor: 'var(--accent-light)' }}>
-                  <Phone size={20} style={{ color: 'var(--accent)' }} />
+            <div className="bg-card border border-border rounded-xl p-6">
+              <div className={`flex flex-col items-center text-center ${isRTL ? 'text-right' : ''}`}>
+                <div className="p-3 rounded-xl mb-4 bg-green-100 dark:bg-green-900/20">
+                  <MessageCircle size={20} className="text-green-600" />
                 </div>
-                <h3 className="font-semibold mb-2" style={{ color: 'var(--foreground)' }}>
-                  {t('contact.phone') || 'Phone Number'}
+                <h3 className={`font-semibold mb-2 text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {isRTL ? 'الواتساب' : 'WhatsApp'}
                 </h3>
                 <a 
-                  href={`tel:${personalInfo.phone}`} 
-                  className="text-sm transition-colors hover:underline"
-                  style={{ 
-                    color: hoverStates.phoneLink ? 'var(--accent)' : 'var(--muted-foreground)' 
-                  }}
-                  onMouseEnter={() => handleHover('phoneLink', true)}
-                  onMouseLeave={() => handleHover('phoneLink', false)}
+                  href={`https://wa.me/${companyProfile.whatsapp.replace('+', '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground transition-colors hover:text-green-600 hover:underline"
                 >
-                  {personalInfo.phone}
+                  {companyProfile.whatsapp}
                 </a>
               </div>
             </div>
             
-            <div className="card p-6" style={{ backgroundColor: 'var(--card)', border: '1px solid var(--border)' }}>
-              <div className="flex flex-col items-center text-center">
-                <div className="p-3 rounded-xl mb-4" style={{ backgroundColor: 'var(--accent-light)' }}>
-                  <MapPin size={20} style={{ color: 'var(--accent)' }} />
+            <div className="bg-card border border-border rounded-xl p-6">
+              <div className={`flex flex-col items-center text-center ${isRTL ? 'text-right' : ''}`}>
+                <div className="p-3 rounded-xl mb-4 bg-primary/10">
+                  <MapPin size={20} className="text-primary" />
                 </div>
-                <h3 className="font-semibold mb-2" style={{ color: 'var(--foreground)' }}>
-                  {t('contact.location') || 'Location'}
+                <h3 className={`font-semibold mb-2 text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {isRTL ? 'الموقع' : 'Location'}
                 </h3>
-                <p className="text-sm text-center" style={{ color: 'var(--muted-foreground)' }}>
-                  {personalInfo.location}
+                <p className={`text-sm text-center text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {isRTL ? companyProfile.arabicLocation : companyProfile.location}
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Contact Form - Full Width */}
-          <div className="card p-6 md:p-8" style={{ backgroundColor: 'var(--card)', border: '1px solid var(--border)' }}>
-            <div className="mb-8 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: 'var(--foreground)' }}>{t('contact.contactForm')}</h2>
-              <p className="text-base max-w-2xl mx-auto" style={{ color: 'var(--muted-foreground)' }}>
-                {t('contact.formDesc') || 'Fill out the form below and I will get back to you as soon as possible.'}
+          {/* Academic Contact Form */}
+          <AcademicContactForm />
+
+          {/* Academic FAQ Section */}
+          <div className="mt-20">
+            <div className={`text-center mb-12 ${isRTL ? 'text-right' : ''}`}>
+              <h2 className={`text-3xl lg:text-4xl font-bold mb-4 text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                {isRTL ? 'الأسئلة الشائعة' : 'Frequently Asked Questions'}
+              </h2>
+              <p className={`text-lg max-w-2xl mx-auto text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                {isRTL 
+                  ? 'أسئلة شائعة حول خدماتنا الأكاديمية وطريقة العمل'
+                  : 'Common questions about our academic services and working process'
+                }
               </p>
             </div>
             
-            <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
-              {/* Status Message */}
-              {submitStatus.type && (
-                <div className={`p-4 rounded-lg text-center ${
-                  submitStatus.type === 'success' 
-                    ? 'bg-green-100 text-green-800 border border-green-200' 
-                    : 'bg-red-100 text-red-800 border border-red-200'
-                }`}>
-                  {submitStatus.message}
-                </div>
-              )}
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>
-                    {t('contact.form.name')} *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    disabled={isSubmitting}
-                    className="w-full px-4 py-3 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-accent transition-all disabled:opacity-50"
-                    style={{ 
-                      backgroundColor: 'var(--input)',
-                      border: '2px solid var(--border)',
-                      color: 'var(--foreground)'
-                    }}
-                    placeholder={t('contact.form.namePlaceholder') || 'Your full name'}
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>
-                    {t('contact.form.email')} *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    disabled={isSubmitting}
-                    className="w-full px-4 py-3 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-accent transition-all disabled:opacity-50"
-                    style={{ 
-                      backgroundColor: 'var(--input)',
-                      border: '2px solid var(--border)',
-                      color: 'var(--foreground)'
-                    }}
-                    placeholder={t('contact.form.emailPlaceholder') || 'your.email@example.com'}
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>
-                  {t('contact.form.subject')} *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  value={formData.subject}
-                  onChange={handleChange}
-                  disabled={isSubmitting}
-                  className="w-full px-4 py-3 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-accent transition-all disabled:opacity-50"
-                  style={{ 
-                    backgroundColor: 'var(--input)',
-                    border: '2px solid var(--border)',
-                    color: 'var(--foreground)'
-                  }}
-                  placeholder={t('contact.form.subjectPlaceholder') || 'Project consultation, development, etc.'}
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>
-                  {t('contact.form.message')} *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  value={formData.message}
-                  onChange={handleChange}
-                  disabled={isSubmitting}
-                  rows={6}
-                  className="w-full px-4 py-3 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-accent transition-all resize-none disabled:opacity-50"
-                  style={{ 
-                    backgroundColor: 'var(--input)',
-                    border: '2px solid var(--border)',
-                    color: 'var(--foreground)'
-                  }}
-                  placeholder={t('contact.form.messagePlaceholder') || 'Tell me about your project, goals, timeline, and budget. The more details you provide, the better I can help you.'}
-                />
-              </div>
-              
-              <button 
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full flex items-center justify-center space-x-3 px-6 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                style={{ 
-                  backgroundColor: hoverStates.submitButton && !isSubmitting ? 'var(--accent-hover)' : 'var(--accent)',
-                  color: 'var(--accent-foreground)',
-                  boxShadow: hoverStates.submitButton && !isSubmitting ? '0 8px 25px rgba(0,0,0,0.15)' : '0 4px 15px rgba(0,0,0,0.1)'
-                }}
-                onMouseEnter={() => !isSubmitting && handleHover('submitButton', true)}
-                onMouseLeave={() => handleHover('submitButton', false)}
-              >
-                <Send size={20} />
-                <span>{isSubmitting ? 'جاري الإرسال...' : t('contact.form.send')}</span>
-              </button>
-
-             
-            </form>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="mt-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4" style={{ color: 'var(--foreground)' }}>{t('contact.faq')}</h2>
-              <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--muted-foreground)' }}>
-                {t('contact.faqDesc') || 'Common questions about my services and working process'}
-              </p>
-            </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {faq.map((item, index) => (
-                <div key={index} className="card p-8 hover:shadow-lg transition-all duration-300" style={{ backgroundColor: 'var(--card)', border: '1px solid var(--border)' }}>
-                  <h3 className="text-lg font-bold mb-4" style={{ color: 'var(--foreground)' }}>{item.question}</h3>
-                  <p className="text-base leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>{item.answer}</p>
+              {/* Academic FAQ Items */}
+              {[
+                {
+                  questionEn: "What academic levels do you support?",
+                  questionAr: "ما هي المستويات الأكاديمية التي تدعمونها؟",
+                  answerEn: "We support all academic levels from undergraduate to PhD across multiple specializations including Computer Science, Engineering, Medical Sciences, Natural Sciences, Business & Economics, and Humanities & Social Sciences.",
+                  answerAr: "ندعم جميع المستويات الأكاديمية من البكالوريوس إلى الدكتوراه عبر تخصصات متعددة بما في ذلك علوم الحاسب، الهندسة، العلوم الطبية، العلوم الطبيعية، إدارة الأعمال والاقتصاد، والعلوم الإنسانية والاجتماعية."
+                },
+                {
+                  questionEn: "How do you ensure originality and avoid plagiarism?",
+                  questionAr: "كيف تضمنون الأصالة وتجنب الانتحال؟",
+                  answerEn: "Every project is written from scratch with original research and analysis. We provide a comprehensive plagiarism report and ensure all sources are properly cited according to academic standards.",
+                  answerAr: "كل مشروع يُكتب من الصفر مع بحث وتحليل أصلي. نقدم تقرير انتحال شامل ونضمن استشهاد صحيح بجميع المصادر وفقاً للمعايير الأكاديمية."
+                },
+                {
+                  questionEn: "What is included in your service packages?",
+                  questionAr: "ما المشمول في حزم الخدمة؟",
+                  answerEn: "Our packages include professional academic writing, research and analysis, multiple revisions, plagiarism report, proper formatting, and 24/7 WhatsApp support depending on the selected tier.",
+                  answerAr: "تشمل حزمنا الكتابة الأكاديمية المهنية، البحث والتحليل، مراجعات متعددة، تقرير انتحال، تنسيق مناسب، ودعم الواتساب على مدار الساعة حسب الباقة المختارة."
+                },
+                {
+                  questionEn: "How long does it take to complete a project?",
+                  questionAr: "كم من الوقت يستغرق إكمال المشروع؟",
+                  answerEn: "Delivery time depends on complexity and urgency. Standard projects take 5-7 days, urgent projects 2-3 days, and emergency projects 24-48 hours. PhD-level projects may require additional time.",
+                  answerAr: "وقت التسليم يعتمد على التعقيد والأولوية. المشاريع العادية تستغرق 5-7 أيام، العاجلة 2-3 أيام، والطارئة 24-48 ساعة. مشاريع الدكتوراه قد تحتاج وقت إضافي."
+                },
+                {
+                  questionEn: "Do you provide revisions?",
+                  questionAr: "هل تقدمون مراجعات؟",
+                  answerEn: "Yes! We provide 2-3 rounds of free revisions depending on your package. PhD Elite package includes unlimited revisions to ensure complete satisfaction.",
+                  answerAr: "نعم! نقدم 2-3 جولات من المراجعات المجانية حسب الباقة. باقة الدكتوراه النخبة تشمل مراجعات غير محدودة لضمان الرضا التام."
+                },
+                {
+                  questionEn: "How do you handle payment and pricing?",
+                  questionAr: "كيف تتعاملون مع الدفع والتسعير؟",
+                  answerEn: "We offer transparent pricing in SAR based on academic level, complexity, and urgency. Payment is secure and we accept multiple methods. Use our pricing calculator for instant estimates.",
+                  answerAr: "نقدم تسعير شفاف بالريال السعودي حسب المستوى الأكاديمي والتعقيد والأولوية. الدفع آمن ونقبل طرق متعددة. استخدم حاسبة الأسعار للحصول على تقدير فوري."
+                }
+              ].map((item, index) => (
+                <div key={index} className="bg-card border border-border rounded-xl p-8 hover:shadow-lg transition-all duration-300">
+                  <h3 className={`text-lg font-bold mb-4 text-foreground ${isRTL ? 'font-arabic text-right' : ''}`}>
+                    {isRTL ? item.questionAr : item.questionEn}
+                  </h3>
+                  <p className={`text-base leading-relaxed text-muted-foreground ${isRTL ? 'font-arabic text-right' : ''}`}>
+                    {isRTL ? item.answerAr : item.answerEn}
+                  </p>
                 </div>
               ))}
             </div>
             
             {/* Additional Help */}
             <div className="mt-12 text-center">
-              <div className="card p-8 max-w-2xl mx-auto" style={{ backgroundColor: 'var(--card)', border: '1px solid var(--border)' }}>
-                <h3 className="text-xl font-semibold mb-4" style={{ color: 'var(--foreground)' }}>
-                  {t('contact.stillHaveQuestions') || 'Still have questions?'}
+              <div className={`bg-card border border-border rounded-xl p-8 max-w-2xl mx-auto ${isRTL ? 'text-right' : ''}`}>
+                <h3 className={`text-xl font-semibold mb-4 text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {isRTL ? 'لا تزال لديك أسئلة؟' : 'Still have questions?'}
                 </h3>
-                <p className="text-base mb-6" style={{ color: 'var(--muted-foreground)' }}>
-                  {t('contact.questionDesc') || "Don't hesitate to reach out! I'm here to help with any questions about your project."}
+                <p className={`text-base mb-6 text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {isRTL 
+                    ? 'لا تتردد في التواصل! نحن هنا للمساعدة في أي أسئلة حول مشروعك الأكاديمي.'
+                    : "Don't hesitate to reach out! We're here to help with any questions about your academic project."
+                  }
                 </p>
-                <a 
-                  href={`mailto:${personalInfo.email}?subject=Question about services`}
-                  className="inline-flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-colors hover:scale-105 transform"
-                  style={{ 
-                    backgroundColor: 'var(--accent)',
-                    color: 'var(--accent-foreground)'
+                <button 
+                  onClick={() => {
+                    const message = isRTL 
+                      ? "مرحباً! لدي أسئلة حول خدماتكم الأكاديمية."
+                      : "Hello! I have questions about your academic services.";
+                    
+                    const encodedMessage = encodeURIComponent(message);
+                    const whatsappUrl = `https://wa.me/966542002960?text=${encodedMessage}`;
+                    
+                    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
                   }}
+                  className={`inline-flex items-center gap-3 px-6 py-3 rounded-lg font-medium bg-primary hover:bg-primary/90 text-primary-foreground transition-colors hover:scale-105 transform ${isRTL ? 'flex-row-reverse font-arabic' : ''}`}
                 >
-                  <Mail size={18} />
-                  <span>{t('contact.askQuestion') || 'Ask a Question'}</span>
-                </a>
+                  <MessageCircle size={18} />
+                  <span>{isRTL ? 'اسأل سؤال' : 'Ask a Question'}</span>
+                </button>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </FadeIn>

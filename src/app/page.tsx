@@ -9,12 +9,14 @@ import { useTheme } from '@/context/ThemeContext';
 import { useTranslatedData } from '@/hooks/useTranslatedData';
 import HeroSection from '@/components/HeroSection';
 import CustomizationSection from '@/components/CustomizationSection';
+import AcademicPricingCalculator from '@/components/AcademicPricingCalculator';
+import AcademicProjectsGrid from '@/components/AcademicProjectsGrid';
 import NoSSR from '@/components/NoSSR';
 
 export default function Home() {
   const { t, isRTL, language } = useLanguage();
   const { themeMode } = useTheme();
-  const { personalInfo, featuredProjects, featuredBlogPosts } = useTranslatedData();
+  const { featuredProjects, featuredBlogPosts } = useTranslatedData();
   
   // Tech stack with icons
   const techStack = [
@@ -38,7 +40,63 @@ export default function Home() {
         {/* === CUSTOMIZATION SECTION === */}
         <CustomizationSection />
 
-     
+        {/* === ACADEMIC SERVICES SECTION === */}
+        <section className="py-8 sm:py-12 lg:py-16 px-4 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <FadeIn direction="up" delay={0.2}>
+              <div className={`text-center mb-8 sm:mb-12 lg:mb-16 ${isRTL ? 'text-right' : ''}`}>
+                <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {isRTL ? 'احسب تكلفة مشروعك الأكاديمي' : 'Calculate Your Academic Project Cost'}
+                </h2>
+                <p className={`text-lg max-w-3xl mx-auto text-muted-foreground leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
+                  {isRTL 
+                    ? 'احصل على تقدير دقيق وفوري لتكلفة مشروعك الأكاديمي باستخدام حاسبة الأسعار المتطورة'
+                    : 'Get an accurate and instant estimate for your academic project cost using our advanced pricing calculator'
+                  }
+                </p>
+              </div>
+            </FadeIn>
+            
+            <FadeIn direction="up" delay={0.4}>
+              <AcademicPricingCalculator />
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* === FEATURED ACADEMIC PROJECTS SECTION === */}
+        <section className="py-8 sm:py-12 lg:py-16 px-4 lg:px-8 bg-muted/30">
+          <div className="max-w-7xl mx-auto">
+            <FadeIn direction="up" delay={0.2}>
+              <div className={`text-center mb-8 sm:mb-12 lg:mb-16 ${isRTL ? 'text-right' : ''}`}>
+                <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 text-foreground ${isRTL ? 'font-arabic' : ''}`}>
+                  {isRTL ? 'مشاريعنا الأكاديمية المميزة' : 'Our Featured Academic Projects'}
+                </h2>
+                <p className={`text-lg max-w-3xl mx-auto text-muted-foreground leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
+                  {isRTL 
+                    ? 'استكشف مجموعة من المشاريع الأكاديمية المتميزة التي نفذناها بنجاح عبر مختلف التخصصات'
+                    : 'Explore our collection of outstanding academic projects successfully delivered across various specializations'
+                  }
+                </p>
+              </div>
+            </FadeIn>
+            
+            <FadeIn direction="up" delay={0.4}>
+              <AcademicProjectsGrid limit={6} showFilters={false} />
+            </FadeIn>
+
+            <FadeIn direction="up" delay={0.6}>
+              <div className="text-center mt-12">
+                <Link
+                  href="/projects"
+                  className={`inline-flex items-center gap-3 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold text-lg transition-all hover:scale-105 ${isRTL ? 'flex-row-reverse font-arabic' : ''}`}
+                >
+                  <Eye size={20} />
+                  {isRTL ? 'عرض جميع المشاريع' : 'View All Projects'}
+                </Link>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
 
 
         {/* === ROADMAP SECTION === */}

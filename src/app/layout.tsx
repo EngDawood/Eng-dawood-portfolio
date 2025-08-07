@@ -8,6 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import ClientThemeProvider from "@/components/ClientThemeProvider";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { SidebarProvider } from "@/context/SidebarContext";
 import { Analytics } from "@vercel/analytics/next"
 
@@ -27,18 +28,20 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "Abdullah Space",
-  description: "",
-  authors: [{ name: "Abdullah" }],
+  title: "Academic Excellence Hub | مركز التميز الأكاديمي",
+  description: "Leading academic services platform specializing in comprehensive support for students across all academic levels. Expert assistance in research, writing, project development, and academic consultation with focus on quality and originality.",
+  authors: [{ name: "Academic Excellence Hub" }],
+  keywords: ["academic services", "research writing", "thesis help", "assignment assistance", "academic consultation", "خدمات أكاديمية", "كتابة البحوث", "مساعدة الرسائل"],
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
     apple: "/logo.png",
   },
   openGraph: {
-    title: "Abdullah Space",
-    description: "",
+    title: "Academic Excellence Hub | مركز التميز الأكاديمي",
+    description: "Professional academic services for students across undergraduate to PhD levels. Quality research, writing, and consultation services.",
     type: "website",
+    siteName: "Academic Excellence Hub",
   },
 };
 
@@ -91,6 +94,7 @@ export default function RootLayout({
             </LayoutWrapper>
           </SidebarProvider>
           <ScrollToTop />
+          <WhatsAppFloat />
         </ClientThemeProvider>
       </body>
     </html>

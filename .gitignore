@@ -16,7 +16,7 @@
 # next.js
 /.next/
 /out/
-
+.env
 # production
 /build
 
@@ -32,10 +32,10 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
-
+.github
 # vercel
 .vercel
-
+.aider.tags.cache.v4
 # typescript
 *.tsbuildinfo
 next-env.d.ts
@@ -65,3 +65,6 @@ portfolio-website.code-workspace
 pnpm-lock.yaml
 # package-lock.json
 # yarn.lock
+# Sentry Config File
+.env.sentry-build-plugin
+.aider*

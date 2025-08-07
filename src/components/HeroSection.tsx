@@ -49,30 +49,30 @@ export default function HeroSection({ techStack }: HeroSectionProps) {
           <StaggerChildren staggerDelay={0.1} className="flex flex-row justify-center items-center gap-4 sm:gap-8 lg:gap-16 py-8">
             <div className="text-center">
               <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 tabular-nums animate-counter" style={{ color: 'var(--foreground)' }}>
-                <CountUp end={5} suffix="+" duration={2} />
+                <CountUp end={7} suffix="+" duration={2} />
               </div>
-              <div className="text-xs sm:text-sm lg:text-base xl:text-lg" style={{ color: 'var(--muted-foreground)' }}>
-                {t('home.stats.experience') || 'سنوات خبرة'}
-              </div>
-              <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-2"></div>
-            </div>
-            <div className="w-px h-8 sm:h-12 lg:h-16 bg-gradient-to-b from-transparent via-border to-transparent" />
-            <div className="text-center">
-              <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 tabular-nums animate-counter" style={{ color: 'var(--foreground)' }}>
-                <CountUp end={37} suffix="+" duration={2.2} />
-              </div>
-              <div className="text-xs sm:text-sm lg:text-base xl:text-lg" style={{ color: 'var(--muted-foreground)' }}>
-                {t('home.stats.projects') || 'مشروع مكتمل'}
+              <div className={`text-xs sm:text-sm lg:text-base xl:text-lg ${isRTL ? 'font-arabic' : ''}`} style={{ color: 'var(--muted-foreground)' }}>
+                {isRTL ? 'سنوات خبرة أكاديمية' : 'Years Academic Experience'}
               </div>
               <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-2"></div>
             </div>
             <div className="w-px h-8 sm:h-12 lg:h-16 bg-gradient-to-b from-transparent via-border to-transparent" />
             <div className="text-center">
               <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 tabular-nums animate-counter" style={{ color: 'var(--foreground)' }}>
-                <CountUp end={76} suffix="+" duration={2.4} />
+                <CountUp end={2847} suffix="+" duration={2.2} />
               </div>
-              <div className="text-xs sm:text-sm lg:text-base xl:text-lg" style={{ color: 'var(--muted-foreground)' }}>
-                {t('home.stats.clients') || 'عميل سعيد'}
+              <div className={`text-xs sm:text-sm lg:text-base xl:text-lg ${isRTL ? 'font-arabic' : ''}`} style={{ color: 'var(--muted-foreground)' }}>
+                {isRTL ? 'طالب تم مساعدته' : 'Students Helped'}
+              </div>
+              <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-2"></div>
+            </div>
+            <div className="w-px h-8 sm:h-12 lg:h-16 bg-gradient-to-b from-transparent via-border to-transparent" />
+            <div className="text-center">
+              <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 tabular-nums animate-counter" style={{ color: 'var(--foreground)' }}>
+                <CountUp end={96} suffix="%" duration={2.4} />
+              </div>
+              <div className={`text-xs sm:text-sm lg:text-base xl:text-lg ${isRTL ? 'font-arabic' : ''}`} style={{ color: 'var(--muted-foreground)' }}>
+                {isRTL ? 'معدل النجاح' : 'Success Rate'}
               </div>
               <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-2"></div>
             </div>
@@ -82,7 +82,7 @@ export default function HeroSection({ techStack }: HeroSectionProps) {
         <FadeIn direction="up" delay={0.6}>
           <div className="space-y-3 sm:space-y-4">
             <p className="text-xs sm:text-sm lg:text-base font-medium" style={{ color: 'var(--muted-foreground)' }}>
-              {t('home.hero.techStack') || 'التقنيات التي أعمل بها'}
+              {isRTL ? 'التخصصات الأكاديمية التي نخدمها' : 'Academic Specializations We Serve'}
             </p>
             <ScrollingTechStack 
               techStack={techStack}
@@ -94,16 +94,26 @@ export default function HeroSection({ techStack }: HeroSectionProps) {
         </FadeIn>
 
         <FadeIn direction="up" delay={0.7} duration={0.6}>
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-6 sm:pt-8 px-4 sm:px-0">
+          <div className={`flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-6 sm:pt-8 px-4 sm:px-0 ${isRTL ? 'flex-row-reverse' : ''}`}>
+            <button 
+              onClick={() => {
+                const message = isRTL 
+                  ? "مرحباً! أهتم بخدماتكم الأكاديمية وأريد استشارة مجانية لمناقشة مشروعي."
+                  : "Hello! I'm interested in your academic services and would like a free consultation to discuss my project.";
+                
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://wa.me/966542002960?text=${encodedMessage}`;
+                
+                window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+              }}
+              className={`px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base text-white transition-all duration-200 hover:opacity-90 text-center ${isRTL ? 'font-arabic' : ''}`}
+              style={{ backgroundColor: 'var(--primary)' }}>
+              {isRTL ? 'احصل على استشارة مجانية' : 'Get Free Consultation'}
+            </button>
             <Link href="/projects" 
-                  className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base text-white transition-all duration-200 hover:opacity-90 text-center"
-                  style={{ backgroundColor: 'var(--primary)' }}>
-              {t('home.hero.viewProjects') || 'استعرض أعمالي'}
-            </Link>
-            <Link href="/contact" 
-                  className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base border transition-all duration-200 hover:bg-card text-center"
+                  className={`px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base border transition-all duration-200 hover:bg-card text-center ${isRTL ? 'font-arabic' : ''}`}
                   style={{ borderColor: 'var(--border)', color: 'var(--foreground)', backgroundColor: 'transparent' }}>
-              {t('home.hero.getInTouch') || 'تواصل معي'}
+              {isRTL ? 'استعرض مشاريعنا الأكاديمية' : 'View Academic Projects'}
             </Link>
           </div>
         </FadeIn>
