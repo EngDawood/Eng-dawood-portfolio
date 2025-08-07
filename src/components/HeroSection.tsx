@@ -102,7 +102,7 @@ export default function HeroSection({ techStack }: HeroSectionProps) {
                   : "Hello! I'm interested in your academic services and would like a free consultation to discuss my project.";
                 
                 const encodedMessage = encodeURIComponent(message);
-                const whatsappUrl = `https://wa.me/966542002960?text=${encodedMessage}`;
+                const whatsappUrl = `https://wa.me/966532296438?text=${encodedMessage}`;
                 
                 window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
               }}

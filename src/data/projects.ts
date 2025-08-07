@@ -42,8 +42,8 @@ export const projects: Project[] = [
     client: "Personal",
     duration: "2 months",
     year: 2024,
-    url: "https://abdullah.dev",
-    github: "https://github.com/abdullah/portfolio-app",
+    url: "https://EngDawood.dev",
+    github: "https://github.com/EngDawood/portfolio-app",
     featured: true,
     challenge: "Creating a responsive, elegant and personal portfolio that works across platforms.",
     solution: "Built using Flutter and Firebase with theme toggling, CV download, and localization support.",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     technologies: ["Flutter", "Dart", "Firebase"],
     testimonial: {
       text: "Exactly what I needed — intuitive and smooth.",
-      author: "Abdullah",
+      author: "EngDawood",
       role: "Developer",
       company: "Personal"
     }
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     client: "AgriTech Lab",
     duration: "3 months",
     year: 2024,
-    github: "https://github.com/abdullah/fruitai-app",
+    github: "https://github.com/EngDawood/fruitai-app",
     featured: true,
     challenge: "Enabling AI fruit recognition in offline environments for farmers.",
     solution: "Trained mobile AI model with offline-first architecture and Firebase sync.",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     client: "Internal",
     duration: "1.5 months",
     year: 2024,
-    github: "https://github.com/abdullah/raseem-tool",
+    github: "https://github.com/EngDawood/raseem-tool",
     featured: true,
     challenge: "Automatically converting technical input into accurate visual diagrams.",
     solution: "Used OpenAI API for parsing and modular visualization engine.",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     technologies: ["Flutter", "OpenAI API", "Dart"],
     testimonial: {
       text: "Solves a real dev pain — super useful.",
-      author: "Abdullah",
+      author: "EngDawood",
       role: "Creator",
       company: "Raseem"
     }
@@ -128,7 +128,7 @@ export const projects: Project[] = [
     client: "HajjTech",
     duration: "2 months",
     year: 2024,
-    github: "https://github.com/abdullah/izahab-app",
+    github: "https://github.com/EngDawood/izahab-app",
     featured: true,
     challenge: "Tracking items in crowded areas and enabling efficient incident responses.",
     solution: "Live maps integration, GPS support, and admin panel for managing reports.",

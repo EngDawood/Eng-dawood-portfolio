@@ -273,7 +273,7 @@ export default function AcademicProjectsGrid({
                           : `Hello! I'd like to inquire about an academic project similar to "${project.title}" in ${specializationInfo?.title}`;
                         
                         const encodedMessage = encodeURIComponent(message);
-                        const whatsappUrl = `https://wa.me/966542002960?text=${encodedMessage}`;
+                        const whatsappUrl = `https://wa.me/966532296438?text=${encodedMessage}`;
                         
                         window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
                       }}

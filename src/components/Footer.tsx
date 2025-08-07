@@ -42,7 +42,7 @@ export default function Footer() {
           {/* Copyright */}
           <div className={`text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
             <p className="text-sm font-medium" style={{ color: 'var(--foreground)' }}>
-              {t('footer.madeBy') || 'Made by'} <span className="font-semibold" style={{ color: 'var(--primary)' }}>Abdullah</span>
+              {t('footer.madeBy') || 'Made by'} <span className="font-semibold" style={{ color: 'var(--primary)' }}>EngDawood</span>
             </p>
             <p className="text-xs mt-1" style={{ color: 'var(--muted)' }}>
               © 2024 {personalInfo.name}. {t('footer.allRights') || 'All rights reserved.'}

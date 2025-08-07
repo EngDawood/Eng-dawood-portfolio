@@ -493,7 +493,7 @@ export default function Sidebar() {
                     {t('footer.by') || 'by'}
                   </span>
                   <span className="text-xs font-semibold" style={{ color: 'var(--primary)' }}>
-                    Abdullah
+                    EngDawood
                   </span>
                 </div>
 

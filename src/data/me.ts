@@ -5,15 +5,22 @@ export interface PersonalInfo {
   shortBio: string;
   email: string;
   phone: string;
+  whatsapp: string;
   location: string;
   available: boolean;
+  serviceHours: {
+    timezone: string;
+    workDays: string[];
+    startTime: string;
+    endTime: string;
+  };
   socialLinks: {
     github: string;
     linkedin: string;
     twitter?: string;
     instagram?: string;
-    dribbble?: string;
-    behance?: string;
+    whatsapp: string;
+    website?: string;
   };
 }
 
@@ -79,15 +86,24 @@ export const personalInfo: PersonalInfo = {
   title: "Leading Academic Services Platform",
   bio: "Academic Excellence Hub is the premier academic services platform specializing in comprehensive support for students across all academic levels and disciplines. We provide expert assistance in research, writing, project development, and academic consultation with a focus on quality, originality, and academic integrity. Our team of experienced academic consultants serves Arabic-speaking students globally while maintaining the highest standards of educational excellence.",
   shortBio: "Leading Academic Services Platform specializing in comprehensive academic support across all disciplines and levels for Arabic-speaking students worldwide.",
-  email: "info@academicexcellencehub.com",
-  phone: "+966542002960",
+  email: "eng.dawoodsaleh@gmail.com",
+  phone: "+966532296438",
+  whatsapp: "+966532296438",
   location: "Makkah - Riyadh, Saudi Arabia",
   available: true,
+  serviceHours: {
+    timezone: "Asia/Riyadh",
+    workDays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+    startTime: "09:00",
+    endTime: "22:00"
+  },
   socialLinks: {
-    github: "https://github.com/academic-excellence-hub",
-    linkedin: "https://linkedin.com/company/academic-excellence-hub",
-    twitter: "https://twitter.com/AcademicHubSA",
-    instagram: "https://instagram.com/academic_excellence_hub"
+    github: "https://github.com/engdawood",
+    linkedin: "https://linkedin.com/dawood-h-567276191",
+    twitter: "https://x.com/EngDawood7/",
+    instagram: "https://instagram.com/EngDawood7",
+    whatsapp: "https://wa.me/966532296438",
+    website: "https://academicexcellencehub.com"
   }
 };
 
@@ -354,4 +370,162 @@ export const statistics: Statistics = {
   projectsCompleted: 3920,
   happyClients: 2847,
   awardsWon: 6
+};
+
+// Service Integration Interfaces
+export interface ContactMethod {
+  type: 'whatsapp' | 'email' | 'phone' | 'form';
+  label: string;
+  arabicLabel: string;
+  value: string;
+  icon: string;
+  primary: boolean;
+  available: boolean;
+}
+
+export interface ServiceCategory {
+  id: string;
+  name: string;
+  arabicName: string;
+  serviceIds: string[];
+  featured: boolean;
+}
+
+// Contact Methods Configuration
+export const contactMethods: ContactMethod[] = [
+  {
+    type: 'whatsapp',
+    label: 'WhatsApp',
+    arabicLabel: 'واتساب',
+    value: '+966532296438',
+    icon: '💬',
+    primary: true,
+    available: true
+  },
+  {
+    type: 'email',
+    label: 'Email',
+    arabicLabel: 'البريد الإلكتروني',
+    value: 'eng.dawoodsaleh@gmail.com',
+    icon: '📧',
+    primary: false,
+    available: true
+  },
+  {
+    type: 'phone',
+    label: 'Phone',
+    arabicLabel: 'الهاتف',
+    value: '+966532296438',
+    icon: '📞',
+    primary: false,
+    available: true
+  }
+];
+
+// Service Categories Configuration
+export const platformServiceCategories: ServiceCategory[] = [
+  {
+    id: 'traditional-academic',
+    name: 'Traditional Academic Services',
+    arabicName: 'الخدمات الأكاديمية التقليدية',
+    serviceIds: [
+      'university-assignments',
+      'computer-programming', 
+      'thesis-dissertation',
+      'graduation-projects',
+      'website-development',
+      'powerpoint-presentations',
+      'online-tutoring',
+      'study-summaries',
+      'academic-sources',
+      'academic-proposals',
+      'research-review',
+      'citation-formatting',
+      'academic-translation',
+      'statistical-analysis',
+      'references-citations',
+      'survey-questionnaire',
+      'research-methodology',
+      'literature-review',
+      'data-analysis',
+      'academic-presentations'
+    ],
+    featured: true
+  },
+  {
+    id: 'ai-powered-services',
+    name: 'AI-Powered Services',
+    arabicName: 'خدمات مدعومة بالذكاء الاصطناعي',
+    serviceIds: [
+      'ai-logo-design',
+      'ai-image-creation',
+      'ai-infographic-design',
+      'ai-marketing-content',
+      'ai-educational-videos',
+      'ai-instant-translation',
+      'ai-text-to-speech',
+      'ai-custom-music',
+      'ai-video-editing',
+      'ai-website-ui-design',
+      'ai-sketch-to-digital',
+      'ai-character-creation',
+      'ai-scriptwriting',
+      'ai-animated-logos',
+      'ai-book-covers',
+      'ai-chatbot-creation',
+      'ai-sentiment-analysis',
+      'ai-content-generator',
+      'ai-data-analysis-reports'
+    ],
+    featured: true
+  }
+];
+
+// WhatsApp Integration Utilities
+export const generateWhatsAppUrl = (
+  message: string,
+  phoneNumber: string = '+966532296438'
+): string => {
+  const cleanNumber = phoneNumber.replace(/[^\d]/g, '');
+  return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
+};
+
+export const getServiceInquiryWhatsAppMessage = (
+  serviceName: string,
+  arabicServiceName: string,
+  additionalInfo?: string
+): string => {
+  let message = `السلام عليكم، أرغب في الاستفسار عن خدمة: ${arabicServiceName} (${serviceName})`;
+  
+  if (additionalInfo) {
+    message += `\n\nتفاصيل إضافية: ${additionalInfo}`;
+  }
+  
+  message += '\n\nأتطلع لسماع رأيكم والتعاون معكم.';
+  message += '\nشكراً لكم';
+  
+  return message;
+};
+
+export const getGeneralInquiryWhatsAppMessage = (): string => {
+  return `السلام عليكم،
+
+أرغب في الاستفسار عن خدماتكم الأكاديمية.
+
+أتطلع لسماع رأيكم والتعاون معكم.
+شكراً لكم`;
+};
+
+// Platform Configuration
+export const platformConfig = {
+  name: 'Academic Excellence Hub',
+  arabicName: 'مركز التميز الأكاديمي',
+  tagline: 'Empowering Academic Success Worldwide',
+  arabicTagline: 'نمكن النجاح الأكاديمي عالمياً',
+  whatsappNumber: '+966532296438',
+  supportedLanguages: ['ar', 'en'],
+  primaryLanguage: 'ar',
+  serviceRegions: ['Saudi Arabia', 'Gulf Region', 'MENA Region'],
+  currency: 'SAR',
+  timezone: 'Asia/Riyadh'
 };

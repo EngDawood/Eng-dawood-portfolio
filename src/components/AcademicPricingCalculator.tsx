@@ -335,7 +335,7 @@ export default function AcademicPricingCalculator({ className = '' }: PricingCal
                 : `Hello! I want to request an academic service:\n\nSpecialization: ${academicSpecializations.find(s => s.id === params.specialization)?.title}\nLevel: ${params.academicLevel}\nWord Count: ${params.wordCount}\nUrgency: ${urgencyMultipliers[params.urgency].nameEn}\nEstimated Cost: ${formatPrice(calculatedPrice)}\n\nI'd like a free consultation.`;
               
               const encodedMessage = encodeURIComponent(message);
-              const whatsappUrl = `https://wa.me/966542002960?text=${encodedMessage}`;
+              const whatsappUrl = `https://wa.me/966532296438?text=${encodedMessage}`;
               
               window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
             }}

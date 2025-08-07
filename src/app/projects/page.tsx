@@ -76,7 +76,7 @@ export default function ProjectsPage() {
                         : "Hello! I have an academic project and would like a free consultation to discuss the details.";
                       
                       const encodedMessage = encodeURIComponent(message);
-                      const whatsappUrl = `https://wa.me/966542002960?text=${encodedMessage}`;
+                      const whatsappUrl = `https://wa.me/966532296438?text=${encodedMessage}`;
                       
                       window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
                     }}

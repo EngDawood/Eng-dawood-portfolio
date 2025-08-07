@@ -19,19 +19,19 @@ export const companyProfile: CompanyProfile = {
   arabicDescription: "منصة الخدمات الأكاديمية الرائدة المتخصصة في تقديم الدعم الشامل للطلاب عبر جميع المستويات الأكاديمية. نقدم المساعدة المتخصصة في البحث والكتابة وتطوير المشاريع والاستشارات الأكاديمية مع التركيز على الجودة والأصالة والنزاهة الأكاديمية.",
   mission: "To bridge the gap between academic challenges and student success by providing world-class educational support that empowers learners to achieve their full potential.",
   arabicMission: "سد الفجوة بين التحديات الأكاديمية ونجاح الطلاب من خلال تقديم الدعم التعليمي عالمي المستوى الذي يمكن المتعلمين من تحقيق إمكاناتهم الكاملة.",
-  email: "info@academicexcellencehub.com",
-  phone: "+966542002960",
-  whatsapp: "+966542002960",
-  location: "Makkah - Riyadh, Saudi Arabia",
-  arabicLocation: "مكة المكرمة - الرياض، المملكة العربية السعودية",
+  email: "eng.dawoodsaleh@gmail.com",
+  phone: "+966532296438",
+  whatsapp: "+966532296438",
+  location: " Riyadh, Saudi Arabia",
+  arabicLocation: " الرياض، المملكة العربية السعودية",
   established: "2017",
   languages: ["Arabic", "English"],
   socialLinks: {
     website: "https://academicexcellencehub.com",
-    linkedin: "https://linkedin.com/company/academic-excellence-hub",
-    twitter: "https://twitter.com/AcademicHubSA",
-    instagram: "https://instagram.com/academic_excellence_hub",
-    whatsapp: "https://wa.me/966542002960"
+    linkedin: "https://linkedin.com/dawood-h-567276191",
+    twitter: "https://x.com/EngDawood7/",
+    instagram: "https://instagram.com/EngDawood7",
+    whatsapp: "https://wa.me/966532296438"
   }
 };
 
@@ -410,7 +410,7 @@ export const platformStatistics: PlatformStatistics = {
 // Expert Profiles
 export const expertProfiles: ExpertProfile[] = [
   {
-    name: "Dr. Abdullah Alhasani",
+    name: "Dr. EngDawood Alhasani",
     arabicName: "د. عبدالله ناصر الحسني",
     title: "Lead Academic Consultant & Platform Director",
     arabicTitle: "المستشار الأكاديمي الرئيسي ومدير المنصة",
@@ -425,7 +425,7 @@ export const expertProfiles: ExpertProfile[] = [
         field: "Computer Science & Information Technology"
       }
     ],
-    bio: "Dr. Abdullah brings over 7 years of experience in academic consulting and project management. He has successfully guided hundreds of students across multiple disciplines, combining technical expertise with educational excellence.",
+    bio: "Dr. EngDawood brings over 7 years of experience in academic consulting and project management. He has successfully guided hundreds of students across multiple disciplines, combining technical expertise with educational excellence.",
     arabicBio: "يجلب د. عبدالله أكثر من 7 سنوات من الخبرة في الاستشارات الأكاديمية وإدارة المشاريع. وقد نجح في توجيه المئات من الطلاب عبر تخصصات متعددة، مدمجاً الخبرة التقنية مع التميز التعليمي.",
     image: "/me/1.png"
   }

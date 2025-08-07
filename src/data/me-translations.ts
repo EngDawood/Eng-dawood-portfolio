@@ -499,19 +499,19 @@ export const testimonialsTranslations: Record<Language, TestimonialTranslation[]
       name: "Mohammed Al-Otaibi",
       position: "Project Manager",
       company: "Public Security Training City",
-      text: "Abdullah demonstrated exceptional skills in managing the IT infrastructure project. His ability to coordinate technical teams and implement best practices was key to the project's success."
+      text: "EngDawood demonstrated exceptional skills in managing the IT infrastructure project. His ability to coordinate technical teams and implement best practices was key to the project's success."
     },
     {
       name: "Sarah Al-Harbi",
       position: "IT Director",
       company: "Al-Jazeera Construction Co.",
-      text: "During Abdullah's tenure as IT Department Supervisor, he showed outstanding leadership and ability to develop the technical team. His contributions to process improvement were remarkable."
+      text: "During EngDawood's tenure as IT Department Supervisor, he showed outstanding leadership and ability to develop the technical team. His contributions to process improvement were remarkable."
     },
     {
       name: "Ahmed Al-Qahtani",
       position: "Student",
       company: "Tuwaiq Academy",
-      text: "The applications that Abdullah developed during the training program show a high level of creativity and technical skill. Especially the 'Raseem' app which solves a real problem in technical documentation."
+      text: "The applications that EngDawood developed during the training program show a high level of creativity and technical skill. Especially the 'Raseem' app which solves a real problem in technical documentation."
     }
   ],
   ar: [

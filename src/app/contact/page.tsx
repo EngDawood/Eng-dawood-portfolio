@@ -195,7 +195,7 @@ export default function ContactPage() {
                       : "Hello! I have questions about your academic services.";
                     
                     const encodedMessage = encodeURIComponent(message);
-                    const whatsappUrl = `https://wa.me/966542002960?text=${encodedMessage}`;
+                    const whatsappUrl = `https://wa.me/966532296438?text=${encodedMessage}`;
                     
                     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
                   }}

@@ -209,7 +209,7 @@ And once you master that, the AI doesn't just follow instructions — it becomes
 ---
 
 *Ready to dive deeper into context engineering? Start by auditing your current AI implementations and identifying opportunities to add structured context. The transformation in AI capability will surprise you.*`,
-      author: "Abdullah Alhasani",
+      author: "EngDawood Alhasani",
       publishedAt: "2024-07-15",
       category: "AI & Innovation",
       tags: ["AI", "Context Engineering", "Prompting", "Technology"],
