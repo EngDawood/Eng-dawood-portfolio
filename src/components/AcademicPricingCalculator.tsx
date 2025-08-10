@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Calculator, Clock, GraduationCap, Zap, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { academicSpecializations, academicLevels, pricingTiers } from '@/data/academic-data';
@@ -35,21 +35,21 @@ export default function AcademicPricingCalculator({ className = '' }: PricingCal
   const [deliveryTime, setDeliveryTime] = useState<string>('');
 
   // Additional services with prices (in SAR)
-  const additionalServices = [
+  const additionalServices = useMemo(() => [
     { id: 'plagiarism-report', nameEn: 'Plagiarism Report', nameAr: 'تقرير الانتحال', price: 50 },
     { id: 'formatting', nameEn: 'Professional Formatting', nameAr: 'التنسيق المهني', price: 75 },
     { id: 'presentation', nameEn: 'Presentation Slides', nameAr: 'شرائح العرض', price: 100 },
     { id: 'data-analysis', nameEn: 'Statistical Analysis', nameAr: 'التحليل الإحصائي', price: 150 },
     { id: 'revision-extra', nameEn: 'Extra Revisions (3x)', nameAr: 'مراجعات إضافية (3x)', price: 100 },
     { id: 'priority-support', nameEn: 'Priority WhatsApp Support', nameAr: 'دعم الواتساب الأولوي', price: 80 }
-  ];
+  ], []);
 
   // Urgency multipliers
-  const urgencyMultipliers = {
+  const urgencyMultipliers = useMemo(() => ({
     standard: { multiplier: 1.0, nameEn: 'Standard', nameAr: 'عادي' },
     urgent: { multiplier: 1.5, nameEn: 'Urgent', nameAr: 'عاجل' },
     emergency: { multiplier: 2.5, nameEn: 'Emergency', nameAr: 'طارئ' }
-  };
+  }), []);
 
   const calculatePrice = useCallback(() => {
     // Get base price from pricing tier

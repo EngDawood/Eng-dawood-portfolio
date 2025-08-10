@@ -16,7 +16,7 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ techStack }: HeroSectionProps) {
-  const { t, isRTL } = useLanguage();
+  const { isRTL } = useLanguage();
   const { personalInfo } = useTranslatedData();
   
   return (

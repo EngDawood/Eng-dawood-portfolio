@@ -535,7 +535,7 @@ export class PricingCalculator {
     vatAmount: number;
     totalAmount: number;
   } {
-    let addOnCosts: { [key: string]: number } = {};
+    const addOnCosts: { [key: string]: number } = {};
     let addOnTotal = 0;
 
     // Calculate add-on costs
@@ -594,7 +594,7 @@ export class PricingCalculator {
     finalAmount: number;
     totalDiscount: number;
   } {
-    let appliedDiscounts: { [key: string]: number } = {};
+    const appliedDiscounts: { [key: string]: number } = {};
     let totalDiscount = 0;
 
     // Apply bulk order discount

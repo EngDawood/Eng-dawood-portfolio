@@ -9,20 +9,22 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
+home/
 # testing
 /coverage
-
 # next.js
 /.next/
 /out/
 .env
 # production
 /build
+When enabled requests will not be able to add any other providers. This enforces that only the providers you have explicitly allowed will be used.402 Insufficient credits. Add more using https://openrouter.ai/settings/credits
+402 Insufficient credits. Add more using https://openrouter.ai/settings/credits
 
 # misc
 .DS_Store
 *.pem
+402 Insufficient credits. Add more using https://openrouter.ai/settings/credits
 
 # debug
 npm-debug.log*
@@ -39,7 +41,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
+CLAUDE*
 # additional ignores
 node_modules_old/
 .claude/
